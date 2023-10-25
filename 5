@@ -1,0 +1,49 @@
+#include<iostream>
+using namespace std;
+struct stinfo
+{
+	int age;
+	char l;
+	bool wasta;
+};
+stinfo readinfo()
+{
+	stinfo info;
+	cout << "Age:? should be >=25 \n";
+	cin >> info.age;
+	cout << "licence?: y/n?\n";
+	cin >> info.l;
+	cout << "Do you have Recomendation? 1/0 \n";
+	cin >> info.wasta;
+	return info;
+}
+bool ishired(stinfo info)
+{
+		
+	if (info.wasta)
+	{
+		return true;
+	}
+	else
+	{
+		return (info.age >= 25 && info.l == 'y');
+
+	}
+}
+void print(stinfo info)
+{
+
+	if (ishired(info))
+	{
+		cout << "Hired\n";
+	}
+	else
+	{
+		cout << "Fired\n";
+	}
+}
+int main()
+{
+	print(readinfo());
+	return 0;
+}
