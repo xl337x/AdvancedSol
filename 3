@@ -1,0 +1,54 @@
+#include<iostream>
+using namespace std;
+int read()
+{
+	int num;
+	cout << "Enter Number TO check... \n\a";
+	cin >> num;
+	return num;
+}
+enum enNum{odd=1,even=2};
+enNum check(int num)
+{
+	int result = num % 2;
+	if (result == 0)
+	{
+		return enNum::even;
+	}
+	else
+	{
+		return enNum::odd;
+	}
+}
+void print(enNum num)
+{
+	if (num == enNum::even)
+	{
+		cout << "The Number is EVEN!\n\a\n\a";
+		for (;;)
+		{
+			system("color 4f");
+			system("color 2F");
+
+		}
+	}
+	else
+	{
+		cout << "The Number is ODD!\n\a\n\a";
+		for (;;)
+		{
+			system("color 4F");
+			system("color 2f");
+
+		}
+	}
+
+	}
+
+
+int main()
+{
+	print(check(read()));
+
+	return 0;
+}
