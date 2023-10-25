@@ -1,0 +1,20 @@
+#include<iostream>
+#include<string>
+using namespace std;
+string readname()
+{
+	string name;
+	cout << "What is YOUR name ...\n\a";
+	getline(cin, name);
+	return name;
+}
+void print(string name)
+{
+	cout << "Welcome to us <" << name << ">.\n\a";
+}
+
+int main()
+{
+	print(readname(""));
+	return 0;
+}
