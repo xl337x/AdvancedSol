@@ -1,0 +1,50 @@
+#include<iostream>
+using namespace std;
+struct stinfo
+{
+	int age;
+	bool license;
+	bool wasta;
+};
+stinfo ReadPersonData()
+{
+	stinfo info;
+	cout << "Enter Your Age > \n";
+	cin >> info.age;
+	cout << "Are You Have License >>0\\1 \n";
+	cin >> info.license;
+	cout << "Are You Have Wasta ? >>0\\1 \n";
+	cin >> info.wasta;
+	return info;
+}
+bool CheckPersonData(stinfo info)
+{
+	if (info.wasta)
+	{
+		return true;
+	}
+	else
+	{
+		return (info.age >= 21 && info.license);
+	}
+}
+void print(stinfo info)
+{
+	if (CheckPersonData(info))
+	{
+		cout << "Hired!\n";
+
+	}
+	else
+	{
+		cout << "Fired!\n";
+
+	}
+
+}
+int main()
+{
+
+	print(ReadPersonData());
+	return 0;
+}
